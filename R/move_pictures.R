@@ -15,7 +15,7 @@ dir <- fs::dir_ls(path_old, recurse = TRUE) %>% #List all files in all subdirect
                 year = lubridate::year(date),
                 month = lubridate::month(date),
                 type = dplyr::case_when( #Classify type of data
-                  stringr::str_detect(value, ".jpg|.jpeg|JPG|JPEG|CR2|cr2") == TRUE ~ "Pictures",
+                  stringr::str_detect(value, ".jpg|.jpeg|JPG|JPEG|CR2|cr2|bmp|png|tif") == TRUE ~ "Pictures",
                   stringr::str_detect(value, "(?<=/)(VID|SL_MO_VID|mp4|MP4)") == TRUE~ "Videos",
                   TRUE ~ "Other"
                 ),
@@ -34,10 +34,10 @@ if(nrow(not_moveable > 0)) {
     )
   ))
   
-  exif <- exifr::read_exif(not_moveable$value) %>%
+  exif <- exifr::read_exif(not_moveable$value) %>% #Read exif data
     dplyr::mutate(
-      date = min(
-        lubridate::as_date(FileModifyDate),
+      date = min( #Take the youngest date
+        lubridate::as_date(FileModifyDate), 
         lubridate::as_date(FileCreateDate)
       ),
       year = lubridate::year(date),
@@ -45,7 +45,7 @@ if(nrow(not_moveable > 0)) {
       type = ifelse(FileType == "JPEG", "Picture", "other"),
       path = stringr::str_c(path_new, "/", year, "/", month, "/", FileName)
     ) %>%
-    dplyr::select("value" = SourceFile,
+    dplyr::select("value" = SourceFile, #Same form as dir
                   date,
                   year,
                   month,
@@ -55,7 +55,7 @@ if(nrow(not_moveable > 0)) {
   
   if (nrow(exif) > 0) {
     
-    dir <- dir %>% 
+    dir <- dir %>% # Bind rows if any pictures with exif data
       dplyr::filter(!is.na(path)) %>% 
       dplyr::bind_rows(.,exif) %>% 
       tibble::rowid_to_column()
@@ -66,24 +66,25 @@ if(nrow(not_moveable > 0)) {
   } else {
     cat(crayon::bgRed("Unfortunately couldn't extract anything from exif data..."))
   }
-}
-
+} else {
+  
 dir <- dir %>% 
-  tibble::rowid_to_column()
+  tibble::rowid_to_column()  #Rowids needed for applying
 
+}
 
 move_file <- function(id){
   
-  newpath <- dir %>% 
+  newpath <- dir %>% #Path to copy to
     dplyr::filter(rowid == id) %>% 
-    dplyr::pull(path)
+    dplyr::pull(path) 
   
   
-  oldpath <- dir %>% 
+  oldpath <- dir %>% # Path to copy from
     dplyr::filter(rowid == id) %>% 
     dplyr::pull(value)
   
-  if(!fs::dir_exists(stringr::str_extract(newpath, "^(.+)\\/"))){
+  if(!fs::dir_exists(stringr::str_extract(newpath, "^(.+)\\/"))){ #Create subdirectory if doesn't exist
     fs::dir_create(stringr::str_extract(newpath, "^(.+)\\/"))
   }
   
@@ -94,12 +95,12 @@ move_file <- function(id){
     return()
   }
   
-  fs::file_move(oldpath, newpath)
+  fs::file_move(oldpath, newpath) #Move files. Maybe function option to move or copy?
   
   cat(stringr::str_c("Succesfully moved ", crayon::blue(oldpath), " to ", crayon::green(newpath), "\n"))
     
 }
 
 #Run to copy
-purrr::map_df(dir$rowid, move_file)
+purrr::map_df(dir$rowid, move_file) # Apply
 }
