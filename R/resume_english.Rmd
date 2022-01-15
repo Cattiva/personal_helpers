@@ -1,0 +1,140 @@
+---
+title: "Alexander Nickels's resume"
+author: Alexander Nickel
+date: "`r Sys.Date()`"
+css: cv_styles.css
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: TRUE
+# uncomment this line to produce HTML and PDF in RStudio:
+knit: pagedown::chrome_print
+---
+
+
+Aside
+================================================================================
+
+
+
+![Alexander Nickel](https://avatars.githubusercontent.com/u/52958718?v=4){width="80%"}
+
+
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+
+-   <i class="fa fa-envelope"></i> [alexander.nickel\@mailbox.com](mailto:alexander.nickel@mailbox.org){.email}
+-   <i class="fa fa-linkedin"></i> [linkedin.com/Alexander-Nickel](https://www.linkedin.com/in/alexander-nickel-48b200110/)
+-   <i class="fa fa-github"></i> [github.com/Cattiva](https://github.com/Cattiva)
+-   <i class="fa fa-phone"></i> +49 178/756 7847
+-   For more information, please contact me via email or LinkedIn.
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+-   Experienced in handling and analyzing big amounts of data.
+
+-   Very strong data visualization skills
+
+-   Highly skilled in regards to market- and liquidity risk with a good understanding of the underlying regulation.
+
+-   Very good knowledge of the German finance landscape with a background in both asset management and retail banking.
+
+-   Programming Skills in R, SQL and basic Python
+
+-   Main Software skills include Bloomberg Terminal / AIM, UBS Delta, Git / Github. Some experience in using AWS services and Linux
+
+
+Main
+================================================================================
+
+Alexander Nickel {#title}
+--------------------------------------------------------------------------------
+
+Using modern tools of data analysis and reporting, I was able to boost my teams performance, build state-of-the-art risk tools and deliver finest interactive reporting for the senior management.
+
+Currently I'm searching for a position that lets me act as an interface between business and IT leveraging my industry knowledge, technical and visualization skills. 
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Ratsgymnasium Gladbeck
+
+Abitur
+
+Gladbeck, Germany
+
+2011
+
+Grade: 2,2
+
+### Deutsche Bank Privat- und Geschäftskunden AG
+
+Retail Banking, Apprenticeship
+
+Essen, Germany
+
+2013 - 2015
+
+Grade: 89% / 1,0
+
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Financial Advisor
+
+Deutsche Bank Privat- und Geschäftskunden AG
+
+Essen, Germany
+
+2015 - 2017
+
+::: {.concise}
+-   Responsible for all banking needs of 400 own clients.
+-   Specialized on personal loans and working with distribution partners.
+-   Branch contact for all english-only customers, especially foreign students.
+:::
+
+### Investment Compliance Specialist
+
+ODDO BHF Asset Management GmbH
+
+Düsseldorf, Germany
+
+2017 - 2019
+
+::: {.concise}
+-   Ex-ante and ex-post constraint monitoring for contractual and regulary constraints.
+-   Coding constraints in the front office system Bloomberg AIM. My work lifted the level of automization from about 75% to over 99%.
+-   Working together with portfolio managers setting up new investment guidelines
+:::
+
+### Risk Analyst \| Market- and Liquidity Risk Controlling
+
+ODDO BHF Asset Management GmbH
+
+Düsseldorf, Germany
+
+2019 - today
+
+::: {.concise}
+-   Oversight of the regulatory risk framework
+-   Daily measurement and controlling of market- and liquidity risks.
+-   Development of a liquidity risk software that calculates regulatory and internal liquidity risk for over 300 portfolios with 45.000 securities daily. This software was written completely in R with some SQL-queries for data retrieval and outputs multiple Excel-reports for the regulators and also interacive html-documents for our portfolio managers and senior management.
+-   Optimization and modernization of our risk processes and analysis.
+-   Qualitative assessment of credit risks for money market funds.
+::: 
+
+------------------
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+This resume was made<br> 
+with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+
+Last updated on `r Sys.Date()`.

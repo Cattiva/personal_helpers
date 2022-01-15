@@ -1,0 +1,137 @@
+---
+title: "Alexander Nickels's resume"
+author: Alexander Nickel
+date: "`r Sys.Date()`"
+css: cv_styles.css
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+# uncomment this line to produce HTML and PDF in RStudio:
+#knit: pagedown::chrome_print
+---
+
+
+Aside
+================================================================================
+
+
+![Alexander Nickel](C:/Users/alexa/Pictures/DSC_7755-Bearbeitet (2).JPG){width="75%"}
+
+
+
+Kontaktdaten {#contact}
+--------------------------------------------------------------------------------
+
+-   <i class="fa fa-envelope"></i> [alexander.nickel\@mailbox.org](mailto:alexander.nickel@mailbox.com){.email}
+-   <i class="fa fa-github"></i> [github.com/Cattiva](https://github.com/Cattiva)
+-   <i class="fa fa-phone"></i> +49 178 / 756 7847
+-   <i class="fa fa-home"></i> Mettmann, NRW
+
+
+Skills {#skills}
+--------------------------------------------------------------------------------
+
+-   Sehr erfahren im Umgang mit und in der Analyse von großen Datenmengen
+
+-   Tiefe Kenntnisse im Bereich Markt- und Liquiditätsrisikomanagement und der dahinterstehenden Regulierung
+
+-   Sehr gut vernetzt in der deutschen Finanzlandschaft mit herausragender Marktkenntnis
+
+-   Programmierskills in R und SQL, Grundkenntnisse in Python 
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Dieser Lebenslauf wurde mit dem R Paket [**pagedown**](https://github.com/rstudio/pagedown) erstellt.
+
+Letztes Update am `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Alexander Nickel {#title}
+--------------------------------------------------------------------------------
+
+Durch die Anwendung von modernsten Methoden der Datenanalyse und durch mein ausgeprägtes "Data Science Mindset" habe ich unser Team auf ein höheres, digitalisiertes Level gehoben, state of the art Risikotools entwickelt und innovative, interaktive Reportings für das Senior Management erstellt.
+
+Jetzt suche ich nach einer neuen Herausforderung, die meine tiefen Industriekenntnisse mit meinen modernen Data Science Skills vereint.
+
+Ausbildung {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Ratsgymnasium Gladbeck
+
+Abitur
+
+Gladbeck, NRW
+
+2011
+
+Note: 2,2
+
+### Deutsche Bank Privat- und Geschäftskunden AG
+
+Ausbildung zum Bankkaufmann
+
+Essen, NRW
+
+2013 - 2015
+
+Abschlussprüfung: 89% 
+
+Berufsschule:     1,0
+
+
+Beruflicher Werdegang {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Berater Privatkunden
+
+Deutsche Bank Privat- und Geschäftskunden AG
+
+Essen, NRW
+
+2015 - 2017
+
+::: {.concise}
+-   Ganzheitliche Betreuung meines eigenen Kundenkreises von 400 Privatkunden
+-   Spezialisierung auf persönliche Kredite und die Vertriebspartnerbetreuung
+-   Filialverantwortlich für alle englischsprachigen Kunden
+:::
+
+### Investment Compliance Specialist
+
+ODDO BHF Asset Management GmbH
+
+Düsseldorf, NRW
+
+2017 - 2019
+
+::: {.concise}
+-   Ex-ante und ex-post Überwachung und Meldung von vertraglichen und gesetzlichen Anlagegrenzen
+- Erster Ansprechpartner der Portfoliomanager bei Grenzverletzungen und deren Behebung
+-   Implementierung von Anlagegrenzen im Frontofficesystem Bloomberg AIM (Erhöhung des Automatisierungsgrades von etwa 75% auf über 99%) 
+-   Enge Zusammenarbeit mit Portfoliomanagern beim Aufsetzen von neuen Anlagerichtlinien
+:::
+
+### Risk Analyst \| Market- and Liquidity Risk Controlling
+
+ODDO BHF Asset Management GmbH
+
+Düsseldorf, NRW
+
+2019 - heute
+
+::: {.concise}
+-   Verantwortlich für die Einhaltung der regulatorischen Rahmenbedingungen
+-   Tägliche Messung und Überwachung aller relevanten Risikowerte im Markt- und Liquiditätsrisiko
+-   Entwicklung einer Software für die Liquiditätsrisikorechnung, welche alle erforderlichen regulatorischen Kennzahlen berechnet und weitere interne Analysen für über 300 Fonds mit insgesamt 45.000 Instrumenten auf täglicher Basis erstellt. Neben Excel-Outputs für das regulatorische Reporting werden auch interaktive HTML-Reports für das Senior Management erstellt.
+-   Optimierung und Modernisierung interner Prozesse
+-   Qualitative Kreditrisikoanalyse von Emittenten für Geldmarktfonds
+::: 
+
+------------------
